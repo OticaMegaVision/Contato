@@ -376,9 +376,215 @@ body::after{
   box-shadow:0 4px 20px rgba(0,0,0,.2);
   opacity:0;transition:opacity 0.2s ease;pointer-events:none;
 }
+
+/* ── DARK MODE ── */
+body.dark {
+  background: #0f0f0f;
+}
+body.dark::before {
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(50,50,50,0.9) 0px, rgba(50,50,50,0.9) 2px,
+      rgba(30,30,30,0.7) 2px, rgba(30,30,30,0.7) 8px),
+    repeating-radial-gradient(circle at 20% 50%,
+      rgba(80,80,80,0.4) 0px, rgba(80,80,80,0.4) 2px,
+      rgba(40,40,40,0.3) 2px, rgba(40,40,40,0.3) 10px);
+  background-size: 40px 40px, 60px 60px;
+  background-blend-mode: overlay;
+  animation: waveMove 15s ease-in-out infinite;
+}
+body.dark::after {
+  background: radial-gradient(circle at 30% 40%, rgba(80,80,80,0.2) 0%, rgba(40,40,40,0.15) 50%, transparent 80%);
+}
+body.dark .card {
+  background: rgba(18,18,18,0.72);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 0 rgba(255,255,255,0.05) inset, 0 24px 60px rgba(0,0,0,.6), 0 4px 16px rgba(0,0,0,.3);
+}
+body.dark .accent {
+  background: linear-gradient(90deg, #222, #555 40%, #888 70%, #222);
+}
+body.dark .brand-name { color: rgba(255,255,255,0.92); }
+body.dark .brand-name em { color: #aaa; }
+body.dark .brand-sub { color: rgba(255,255,255,0.35); }
+body.dark .status-badge.open { background:rgba(20,60,30,0.6); border-color:rgba(34,197,94,0.3); color:#86efac; }
+body.dark .status-badge.closed { background:rgba(50,50,50,0.6); border-color:rgba(150,150,150,0.3); color:#bbb; }
+body.dark .sep { background: linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent); }
+body.dark .services-lbl { color: rgba(255,255,255,0.4); }
+body.dark .svc {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+body.dark .svc:hover { background: rgba(255,255,255,0.09); }
+body.dark .svc-ico { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+body.dark .svc-ico svg { stroke: #888; }
+body.dark .svc-nm { color: rgba(255,255,255,0.45); }
+body.dark .tab {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+}
+body.dark .tab.active {
+  background: linear-gradient(135deg,#1a1a1a,#333,#555);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+body.dark .tab:not(.active):hover { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); }
+body.dark .info-card {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.09);
+}
+body.dark .ic { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.1); }
+body.dark .ic-label { color: rgba(255,255,255,0.35); }
+body.dark .ic-val { color: rgba(255,255,255,0.82); }
+body.dark .btn-vcard {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+}
+body.dark .btn-vcard:hover { background: rgba(255,255,255,0.12); }
+body.dark .btn-wa {
+  background: linear-gradient(135deg,rgba(10,60,40,0.85),rgba(20,120,60,0.85));
+  border-color: rgba(34,197,94,0.2);
+}
+body.dark .btn-sec {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+}
+body.dark .btn-sec:hover { background: rgba(255,255,255,0.12); }
+body.dark .pix {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: none;
+}
+body.dark .pix-label { color: rgba(255,255,255,0.35); }
+body.dark .pix-val { color: rgba(255,255,255,0.85); }
+body.dark .pix-sub { color: rgba(255,255,255,0.3); }
+body.dark .pix-copy-row { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.08); }
+body.dark .pix-key-label { color: rgba(255,255,255,0.35); }
+body.dark .pix-key-val { color: rgba(255,255,255,0.85); }
+body.dark .copy-btn {
+  background: linear-gradient(135deg,#222,#444);
+  color: #fff;
+}
+body.dark .copy-btn.copied { background: linear-gradient(135deg,#14532d,#16a34a); }
+body.dark .qr-wrap {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.09);
+  box-shadow: none;
+}
+body.dark .qr-title { color: rgba(255,255,255,0.4); }
+body.dark .qr-desc { color: rgba(255,255,255,0.45); }
+body.dark .qr-unit { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.75); }
+body.dark .wifi-section { border-color: rgba(255,255,255,0.09); }
+body.dark .wifi-header-btn { background: rgba(255,255,255,0.05); border-bottom-color: rgba(255,255,255,0.07); }
+body.dark .wifi-header-btn:hover { background: rgba(255,255,255,0.09); }
+body.dark .wifi-head-title { color: rgba(255,255,255,0.82); }
+body.dark .wifi-head-sub { color: rgba(255,255,255,0.3); }
+body.dark .wifi-chevron { color: rgba(255,255,255,0.4); }
+body.dark .wifi-locked { background: rgba(0,0,0,0.2); }
+body.dark .lock-title { color: rgba(255,255,255,0.85); }
+body.dark .lock-desc { color: rgba(255,255,255,0.4); }
+body.dark .lock-desc strong { color: rgba(255,255,255,0.7); }
+body.dark .btn-avaliar {
+  background: linear-gradient(135deg,#1a1a1a,#333,#555);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+body.dark .btn-ja-avaliei {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.35);
+}
+body.dark .btn-ja-avaliei:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.25); }
+body.dark .wifi-unlocked { background: rgba(0,0,0,0.15); }
+body.dark .wifi-ssid-pill { background: linear-gradient(135deg,#1a1a1a,#444); }
+body.dark .review-btn {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: none;
+}
+body.dark .review-btn:hover { background: rgba(255,255,255,0.1); }
+body.dark .review-text { color: rgba(255,255,255,0.75); }
+body.dark .review-btn svg { color: rgba(255,255,255,0.3); }
+body.dark .social { border-top-color: rgba(255,255,255,0.07); }
+body.dark .soc { color: rgba(255,255,255,0.3); }
+body.dark .soc:hover { color: rgba(255,255,255,0.7); }
+body.dark .overlay { background: rgba(0,0,0,0.7); }
+body.dark .modal {
+  background: rgba(15,15,15,0.85);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,0.07) inset;
+}
+body.dark .modal h3 { color: rgba(255,255,255,0.88); }
+body.dark .modal p { color: rgba(255,255,255,0.35); }
+body.dark .share-opt {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.72);
+}
+body.dark .share-opt:hover { background: rgba(255,255,255,0.12); }
+body.dark .modal-close {
+  background: linear-gradient(135deg,#1a1a1a,#333,#555);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+}
+body.dark .toast-message {
+  background: rgba(20,20,20,0.9);
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ── DARK TOGGLE BUTTON ── */
+.dark-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 200;
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  padding: 3px;
+  transition: background .35s ease, box-shadow .35s ease;
+  background: rgba(237,232,223,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,0.5) inset;
+  border: 1px solid rgba(255,255,255,0.45);
+  display: flex;
+  align-items: center;
+}
+.dark-toggle .knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1), background .35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+}
+body.dark .dark-toggle {
+  background: rgba(30,30,30,0.75);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.05) inset;
+}
+body.dark .dark-toggle .knob {
+  transform: translateX(22px);
+  background: #1a1a1a;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
 </style>
 </head>
 <body>
+
+<button class="dark-toggle" onclick="toggleDark()" title="Alternar modo escuro">
+  <span class="knob" id="darkKnob">☀️</span>
+</button>
 
 <div class="card">
   <div class="accent"></div>
@@ -830,6 +1036,21 @@ function salvarContato(e){
 // INIT
 updateAll('barueri');
 checkStatus('barueri');
+
+// DARK MODE
+function toggleDark(){
+  const isDark = document.body.classList.toggle('dark');
+  document.getElementById('darkKnob').textContent = isDark ? '🌙' : '☀️';
+  localStorage.setItem('megavision_dark', isDark ? '1' : '0');
+}
+(function(){
+  if(localStorage.getItem('megavision_dark')==='1'){
+    document.body.classList.add('dark');
+    const k=document.getElementById('darkKnob');
+    if(k) k.textContent='🌙';
+  }
+})();
+
 </script>
 </body>
 </html>
